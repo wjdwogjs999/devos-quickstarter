@@ -1,0 +1,5 @@
+resource_group: "리소스 그룹을 입력하세요."
+vm_size : "VM Size를 입력하세요."
+instance_name : "VM 이름을 입력하세요."
+location : "지역을 입력하세요."
+virtual_network_name : "Virtual network 이름을 입력하세요."
