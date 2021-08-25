@@ -1,0 +1,10 @@
+---
+- hosts: targetServer
+  gather_facts: False
+  become: true
+  vars_files:
+    - group_vars/configuration-aws.yml
+  tasks:
+    - include_role:
+        name: aws-configuration
+        tasks_from: absent
