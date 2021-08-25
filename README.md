@@ -10,3 +10,4 @@ ansible-azure-provisioning.yml
 
 ansible-gcp-provisioning.yml
 
+ansible-aws-configuration.yml
