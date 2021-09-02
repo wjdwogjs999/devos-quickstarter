@@ -2,7 +2,7 @@
 - hosts: targetServer
   gather_facts: False
   become: true
-  become_user: ec2-user
+  become_method: sudo
   vars_files:
     - group_vars/configuration-aws.yml
   roles:
