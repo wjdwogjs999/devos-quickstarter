@@ -2,6 +2,7 @@
 - hosts: targetServer
   gather_facts: False
   become: true
+  become_user: root
   vars_files:
     - group_vars/configuration-aws.yml
   roles:
