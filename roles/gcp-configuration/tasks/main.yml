@@ -7,12 +7,8 @@
   debug:
     msg: "hostName is {{ host_info.stdout }}"
 
-- name: Enable nginx for amazon linux 2
-  shell: "amazon-linux-extras enable nginx1.12"
-  become: yes
-
 - name: Install Nginx
-  yum:
+  apt:
     name: nginx
     state: present
 
