@@ -2,7 +2,7 @@
 - hosts: targetServer
   gather_facts: False
   become: true
-  remote_user: "{{ remote_user }}"
+  remote_user: jiseon.kim
   vars_files:
     - group_vars/configuration-gcp.yml
   roles:
