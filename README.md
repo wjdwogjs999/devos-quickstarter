@@ -16,6 +16,8 @@ ansible-aws-configuration-clean-up.yml
 
 ansible-gcp-configuration.yml
 
+ansible-gcp-configuration-clean-up.yml
+
 ## Pipeline 예제
  * src/main/webapp: Pipeline 통해서 CI/CD Application 
  * bin/*, appspec.yml: Code Deployment 관련 파일 

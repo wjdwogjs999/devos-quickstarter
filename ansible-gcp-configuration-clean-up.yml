@@ -1,0 +1,10 @@
+---
+- hosts: targetServer
+  gather_facts: False
+  become: true
+  vars_files:
+    - group_vars/configuration-gcp.yml
+  tasks:
+    - include_role:
+        name: gcp-configuration
+        tasks_from: absent
