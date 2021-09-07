@@ -6,15 +6,15 @@ files:
 permissions:
   - object: /usr/share/tomcat8/webapps/app
     pattern: "**"
-    owner: root
-    group: root
+    owner: tomcat
+    group: tomcat
     mode: 644
     type:
       - file
   - object: /usr/share/tomcat8/webapps/app
     pattern: "**"
-    owner: root
-    group: root
+    owner: tomcat
+    group: tomcat
     mode: 755
     type:
       - directory 
