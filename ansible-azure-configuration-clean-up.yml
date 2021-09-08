@@ -1,0 +1,10 @@
+---
+- hosts: targetServer
+  gather_facts: False
+  become: true
+  vars_files:
+    - group_vars/configuration-azure.yml
+  tasks:
+    - include_role:
+        name: azure-configuration
+        tasks_from: absent
