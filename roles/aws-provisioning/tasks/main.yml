@@ -1,8 +1,8 @@
 ---
+
     
 - name: debug 
-  command: sleep 5m
-
+  command: pip install boto
 
 - name: Create EC2 Instance
   ec2_instance:
@@ -13,3 +13,6 @@
     vpc_subnet_id: "{{ vpc_subnet_id }}"
     security_group: "{{ sec_group }}"
     name: "{{ instance_name }}"
+    
+- name: debug 
+  command: sleep 5m
