@@ -1,13 +1,11 @@
 ---
 - name: Create EC2 Instance
-  amazon.aws.ec2:
+  ec2_instance:
     key_name: "{{ key_name }}"
-    image: "{{ image }}"
+    image_id: "{{ image }}"
     instance_type: "{{ instance_type }}"
     region: "{{ region }}"
     vpc_subnet_id: "{{ vpc_subnet_id }}"
-    group_id: "{{ sec_group }}"
-    instance_tags:
-      Name: "{{ instance_name }}"
-    wait: true
-    count: 1
+    security_group: "{{ sec_group }}"
+    name: "{{ instance_name }}"
+    
