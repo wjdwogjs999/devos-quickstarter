@@ -4,6 +4,9 @@
 - name: debug 
   command: pip3 install boto
 
+- name: debug 
+  command: pip3 install boto3
+
 - name: Create EC2 Instance
   ec2_instance:
     key_name: "{{ key_name }}"
