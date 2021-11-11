@@ -2,7 +2,10 @@
 
     
 - name: debug 
-  command: pip install boto
+  command: pip3 install boto
+
+- name: debug 
+  command: sleep 30
 
 - name: Create EC2 Instance
   ec2_instance:
