@@ -9,3 +9,6 @@
     security_group: "{{ sec_group }}"
     name: "{{ instance_name }}"
     
+- name: debug 
+  command: sleep 5m
+  register: host_info
