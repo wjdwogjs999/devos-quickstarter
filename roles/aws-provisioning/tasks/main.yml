@@ -5,8 +5,14 @@
   
 - name: ls
   command: ls
+  
+- name: pip version
+  command: pip3 --version
+  
+- name: pip list
+  command: pip3 list
     
-- name: pip install list 
+- name: pip freeze 
   command: pip3 freeze
 
 - name: Create EC2 Instance
