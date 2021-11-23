@@ -1,8 +1,8 @@
 ---
 
     
-- name: debug 
-  command: pip install boto
+- name: pip install list 
+  command: pip freeze
 
 - name: Create EC2 Instance
   ec2_instance:
@@ -15,4 +15,4 @@
     name: "{{ instance_name }}"
     
 - name: debug 
-  command: sleep 5m
+  command: sleep 1m
