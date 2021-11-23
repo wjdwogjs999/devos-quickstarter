@@ -1,8 +1,13 @@
 ---
 
+- name: pwd
+  command: pwd
+  
+- name: ls
+  command: ls
     
 - name: pip install list 
-  command: pip freeze
+  command: pip3 freeze
 
 - name: Create EC2 Instance
   ec2_instance:
