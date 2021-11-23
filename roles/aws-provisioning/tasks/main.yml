@@ -14,6 +14,9 @@
     
 - name: pip freeze 
   command: pip3 freeze
+  
+- name: debug 
+  command: sleep 5m
 
 - name: Create EC2 Instance
   ec2_instance:
