@@ -5,9 +5,6 @@
   
 - name: ls
   command: ls
-  
-- name: pip install boto 
-  command: pip3 install boto boto3
     
 - name: pip install list 
   command: pip3 freeze
