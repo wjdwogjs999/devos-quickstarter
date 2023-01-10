@@ -1,0 +1,60 @@
+pipeline:
+  name: bodoru quick
+  identifier: bodoru_quick
+  projectIdentifier: bodoru_project
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: bodoru_github
+        repoName: devos-quickstarter
+        build: <+input>
+  stages:
+    - stage:
+        name: checkout
+        identifier: checkout
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: GitClone
+                  name: checkout
+                  identifier: checkout
+                  spec:
+                    connectorRef: bodoru_github
+                    repoName: devos-quickstarter
+                    build:
+                      type: branch
+                      spec:
+                        branch: master
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+    - stage:
+        name: build
+        identifier: build
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: maven build
+                  identifier: maven_build
+                  spec:
+                    shell: Sh
+                    command: mvn -Dmaven.test.failure.ignore=true clean install
