@@ -59,6 +59,30 @@ pipeline:
                     shell: Sh
                     command: mvn -Dmaven.test.failure.ignore=true clean install
     - stage:
+        name: "push "
+        identifier: push
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: push docker
+                  identifier: push_docker
+                  spec:
+                    connectorRef: harbor_sandbox
+                    repo: bodoru/bodoru-simple
+                    tags:
+                      - latest
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+    - stage:
         name: deploy
         identifier: deploy
         description: ""
