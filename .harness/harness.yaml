@@ -67,6 +67,14 @@ pipeline:
           deploymentType: Kubernetes
           service:
             serviceRef: bodorusimple
+            serviceInputs:
+              serviceDefinition:
+                type: Kubernetes
+                spec:
+                  artifacts:
+                    primary:
+                      primaryArtifactRef: <+input>
+                      sources: <+input>
           environment:
             environmentRef: bodoru_env
             deployToAll: false
