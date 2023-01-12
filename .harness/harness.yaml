@@ -36,7 +36,6 @@ pipeline:
     - stage:
         name: "push "
         identifier: push
-        description: ""
         type: CI
         spec:
           cloneCodebase: true
